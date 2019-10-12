@@ -1,13 +1,112 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #444;
+}
+
+.container{
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* nav Component */
+
+nav.navbar{
+  background: #333;
+  color: #dddddd;
+  padding: 1rem 0;
+  box-shadow: 0px 0px 5px #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav.navbar .container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav.navbar a{
+  color: #DDD;
+  text-decoration: none;
+}
+
+nav.navbar ul{
+  list-style: none;
+  display: flex;
+}
+
+nav.navbar ul li{
+  padding: 0 1rem
+}
+
+@media(min-width: 580px) {
+  nav.navbar .container{
+      justify-content: space-between;
+      flex-direction: row
+  }
+}
+
+/* toWatch Component */
+.toWatch,
+.watched{
+  margin-top: 5rem;
+}
+/* movie Component */
+.movie {
+ background: #333;
+ color: #f2f2f2;
+ padding: 1rem;
+ box-shadow: 0px 0px 5px #333;
+ margin-bottom: 1rem
+}
+
+.movie .title{
+  font-size: 25px;
+}
+
+.movie .title i{
+  margin: 0 5px;
+  color: #555;
+  cursor: pointer;
+
+}
+
+.genre,
+.cast{
+  padding: 0.5rem 0
+}
+
+.tag{
+  background: #f2f2f2;
+  font-size: 10px;
+  font-weight: bold;
+  color: #333;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.cast .tag{
+  font-size: 13px; 
+  background: #555555;
+  color: #f2f2f2
+}
+
+.description{
+  border-left: 3px solid #555;
+  padding: 0.5rem;
+}
+
+.description p{
+  letter-spacing: 1.5px;
+  color: #a8a5a5
 }
